@@ -29,9 +29,8 @@ pipeline:
       - GIT_TOKEN=${GIT_TOKEN}
     secrets: [ git_token ]
     commands:
-      #- dep ensure -vendor-only  
-      - ls -a
-      - goreleaser --skip-publish --skip-validate --debug
+      - dep ensure -vendor-only  
+      - goreleaser --snapshot
     when:
       event: [ push, pull_request ]
 
@@ -44,7 +43,6 @@ pipeline:
     secrets: [ git_token ]
     commands:
       - dep ensure -vendor-only  
-      - git describe --tags
       - goreleaser
     when: 
       event: [ tag, deployment ]
