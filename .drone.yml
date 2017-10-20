@@ -34,6 +34,7 @@ pipeline:
     secrets: [ git_token ]
     commands:
       - dep ensure -vendor-only  
+      - git describe --tags
       - goreleaser
     when: 
       event: [ tag, deployment ]
