@@ -22,7 +22,7 @@ pipeline:
     commands:
       #- dep ensure -vendor-only  
       - ls -a
-      - goreleaser 
+      - goreleaser --skip-publish --skip-validate --debug
     when:
       event: [ push, pull_request ]
 
