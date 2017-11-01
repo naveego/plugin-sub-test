@@ -39,6 +39,7 @@ pipeline:
     endpoint: http://navget.n5o.green
     files: plugin-sub-test icon.png
     os: ${GOOS}
+    secrets: [ "navget_token" ]
     when: 
       branch: master
 
