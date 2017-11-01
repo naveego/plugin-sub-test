@@ -1,0 +1,15 @@
+{
+    "name": "sub-test",
+    "description": "Test subscriber which sends data points to the console or a file.",
+    "versionDescription": "Version 1",
+    "version": "1.0.0",
+    "iconFile": "icon.png",
+    "executable": "plugin-sub-test",
+    "configSchema": [
+        {
+            "name": "file",
+            "label": "File to write data points to",
+            "type": "string"
+        }
+    ]
+}
